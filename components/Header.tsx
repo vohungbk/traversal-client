@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import ActiveLink from "./ActiveLink";
 
 function Header() {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -87,27 +88,12 @@ function Header() {
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" href="/">
-                  Home <span className="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item active">
-                <Link className="nav-link" href="/services">
-                  Destinations
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className="nav-link" href="/contact">
-                  Contact
-                </Link>
-              </li>
+              <ActiveLink href="/">
+                Home <span className="sr-only">(current)</span>
+              </ActiveLink>
+              <ActiveLink href="/about">About</ActiveLink>
+              <ActiveLink href="/services">Destinations</ActiveLink>
+              <ActiveLink href="/contact">Contact</ActiveLink>
             </ul>
           </div>
           <div className="d-lg-block d-none">

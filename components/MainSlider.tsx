@@ -4,8 +4,6 @@ import React from "react";
 function MainSlider() {
   return (
     <section className="w3l-main-slider" id="home">
-      <Script src="/assets/js/jquery-3.3.1.min.js" />
-      <Script src="/assets/js/jquery.min.js" />
       <Script src="/assets/js/jquery.zoomslider.min.js" />
       <div className="banner-content">
         <div
