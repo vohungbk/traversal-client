@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
+import Link from "next/link";
+import { useEffect } from "react";
 
 function Footer() {
   const scrollToTop = () => {
@@ -38,19 +39,19 @@ function Footer() {
                     <h3>Company</h3>
                     <ul className="footer-gd-16">
                       <li>
-                        <a href="index.html">Home</a>
+                        <Link href="/">Home</Link>
                       </li>
                       <li>
-                        <a href="about.html">About Us</a>
+                        <Link href="/about">About Us</Link>
                       </li>
                       <li>
-                        <a href="services.html">Services</a>
+                        <Link href="/services">Services</Link>
                       </li>
                       <li>
-                        <a href="blog.html">Blog</a>
+                        <Link href="blog.html">Blog</Link>
                       </li>
                       <li>
-                        <a href="contact.html">Contact Us</a>
+                        <Link href="/contact">Contact Us</Link>
                       </li>
                     </ul>
                   </div>
@@ -67,7 +68,7 @@ function Footer() {
                         <a href="#url">Latest Media</a>
                       </li>
                       <li>
-                        <a href="about.html">About Company</a>
+                        <Link href="/about">About Company</Link>
                       </li>
                       <li>
                         <a href="#url">Our Packages</a>
@@ -84,7 +85,7 @@ function Footer() {
                         <a href="#url">Our Terms</a>
                       </li>
                       <li>
-                        <a href="services.html">Services</a>
+                        <Link href="/services">Services</Link>
                       </li>
                       <li>
                         <a href="landing-single.html">Landing Page</a>
@@ -148,14 +149,6 @@ function Footer() {
         <button onClick={scrollToTop} id="movetop" title="Go to top">
           <span className="fa fa-angle-up"></span>
         </button>
-        {/* 
-        <script>
-          $(function (){" "}
-          {$(".navbar-toggler").click(function () {
-            $("body").toggleclassName("noscroll");
-          })}
-          );
-        </script> */}
       </section>
     </footer>
   );
